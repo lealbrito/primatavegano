@@ -1,7 +1,7 @@
 
 backend:
   name: github
-  repo: SEU_USUARIO/SEU_REPOSITORIO
+  repo: brenobrito/primatavegano
   branch: main
   site_domain: www.primatavegano.com.br
 
