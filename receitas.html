@@ -20,9 +20,12 @@
 
   <main>
     <div class="top-bar">
-      <input type="text" id="buscar" placeholder="Buscar receitas...">
-      <a href="admin/">Enviar Receita</a>
-    </div>
+      <form id="form-busca" style="display: flex; gap: 0.5rem; flex: 1;">
+       <input type="text" id="buscar" placeholder="Buscar receitas..." />
+       <button type="submit">Buscar</button>
+      </form>
+  <a href="admin/">Enviar Receita</a>
+</div>
 
     <div id="lista-receitas"></div>
   </main>
