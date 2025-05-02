@@ -1,0 +1,21 @@
+
+backend:
+  name: github
+  repo: SEU_USUARIO/SEU_REPOSITORIO
+  branch: main
+  site_domain: www.primatavegano.com.br
+
+media_folder: "imagens/uploads"
+public_folder: "/imagens/uploads"
+
+collections:
+  - name: "receitas"
+    label: "Receitas"
+    folder: "receitas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Ingredientes", name: "ingredientes", widget: "text"}
+      - {label: "Modo de Preparo", name: "modo", widget: "text"}
