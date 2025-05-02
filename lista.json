@@ -1,0 +1,17 @@
+
+[
+  {
+    "titulo": "Estrogonofe de Grão-de-Bico",
+    "imagem": "https://via.placeholder.com/600x300?text=Estrogonofe",
+    "ingredientes": "Grão-de-bico, creme de aveia, tomate, cebola, alho, mostarda, ketchup.",
+    "preparo": "Refogue os ingredientes, adicione o creme vegetal e sirva com arroz e batata palha.",
+    "data": "2025-05-01"
+  },
+  {
+    "titulo": "Panqueca de Banana",
+    "imagem": "https://via.placeholder.com/600x300?text=Panqueca",
+    "ingredientes": "Banana madura, aveia, leite vegetal, canela.",
+    "preparo": "Amasse a banana, misture com os outros ingredientes e frite em fogo baixo.",
+    "data": "2025-04-28"
+  }
+]

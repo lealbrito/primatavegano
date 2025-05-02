@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receitas - Primata Vegano</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .receita { margin-bottom: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem; }
+    #buscar { margin-bottom: 1rem; width: 100%; padding: 0.5rem; }
+    .top-bar { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar a { text-decoration: none; background: #4caf50; color: white; padding: 0.5rem 1rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Receitas - Primata Vegano</h1>
+  </header>
+
+  <main>
+    <div class="top-bar">
+      <input type="text" id="buscar" placeholder="Buscar receitas...">
+      <a href="admin/">Enviar Receita</a>
+    </div>
+
+    <div id="lista-receitas"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Primata Vegano.</p>
+  </footer>
+
+  <script>
+    async function carregarReceitas() {
+      const resposta = await fetch('receitas/lista.json');
+      const dados = await resposta.json();
+
+      const container = document.getElementById('lista-receitas');
+      container.innerHTML = "";
+
+      dados.sort((a, b) => new Date(b.data) - new Date(a.data));
+
+      for (const r of dados) {
+        const bloco = document.createElement('div');
+        bloco.className = 'receita';
+        bloco.innerHTML = `
+          <h2>${r.titulo}</h2>
+          <img src="${r.imagem}" alt="${r.titulo}" style="max-width:100%;height:auto;" />
+          <h3>Ingredientes</h3>
+          <p>${r.ingredientes}</p>
+          <h3>Modo de Preparo</h3>
+          <p>${r.preparo}</p>
+        `;
+        container.appendChild(bloco);
+      }
+
+      document.getElementById('buscar').addEventListener('input', function() {
+        const termo = this.value.toLowerCase();
+        const receitas = document.querySelectorAll('.receita');
+        receitas.forEach(div => {
+          const texto = div.innerText.toLowerCase();
+          div.style.display = texto.includes(termo) ? '' : 'none';
+        });
+      });
+    }
+
+    carregarReceitas();
+  </script>
+</body>
+</html>
