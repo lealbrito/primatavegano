@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Primata Vegano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Primata Vegano</h1>
+    <p>Um portal para quem vive e pensa o veganismo</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="#">Receitas</a>
+    <a href="#">Dicas</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <main>
+    <h2>Fale com a gente</h2>
+    <form action="https://primatavegano-backend.onrender.com/enviar" method="POST">
+      <label for="nome">Nome (obrigatório):</label><br>
+      <input type="text" id="nome" name="nome" required><br><br>
+
+      <label for="telefone">Telefone (opcional):</label><br>
+      <input type="tel" id="telefone" name="telefone"><br><br>
+
+      <label for="email">E-mail (obrigatório):</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label>É vegano? (obrigatório):</label><br>
+      <input type="radio" id="veganoSim" name="vegano" value="Sim" required>
+      <label for="veganoSim">Sim</label><br>
+      <input type="radio" id="veganoNao" name="vegano" value="Não" required>
+      <label for="veganoNao">Não</label><br><br>
+
+      <label for="titulo">Título:</label><br>
+      <input type="text" id="titulo" name="titulo"><br><br>
+
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem" rows="6" required></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Primata Vegano. Todos os direitos reservados.</p>
+    <p>Contato direto: <a href="mailto:contato@primatavegano.com.br">contato@primatavegano.com.br</a></p>
+  </footer>
+</body>
+</html>
