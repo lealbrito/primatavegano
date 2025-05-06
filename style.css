@@ -44,7 +44,23 @@ footer {
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
+body {
+  padding-top: 80px; /* espaço para o menu fixo */
+}
 #form-busca input {
   flex: 1;
   padding: 0.5rem;
